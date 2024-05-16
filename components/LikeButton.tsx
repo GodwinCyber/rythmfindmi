@@ -18,7 +18,7 @@ const LikedButton: React.FC<LikeButtonProps> = ({
     const { supabaseClient } = useSessionContext();
     const authModal = useAuthModal();
     const { user } = useUser();
-    const [isLiked, setIsLiked] = useState();
+    const [isLiked, setIsLiked] = useState(false);
 
     useEffect(() => {
         if (!user?.id) {
